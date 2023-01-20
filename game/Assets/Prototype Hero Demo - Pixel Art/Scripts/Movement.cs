@@ -16,7 +16,15 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            rb.velocity = new Vector2(0, 10);
+            rb.velocity = new Vector2(0, 5);
+        }
+        if (Input.GetKeyDown("left"))
+        {
+            rb.velocity = new Vector2(-3, 0);
+        }
+        if (Input.GetKeyDown("right"))
+        {
+            rb.velocity = new Vector2(3, 0);
         }
     }
 }
