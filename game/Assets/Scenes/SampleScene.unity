@@ -220,7 +220,6 @@ GameObject:
   - component: {fileID: 548990332}
   - component: {fileID: 548990335}
   - component: {fileID: 548990336}
-  - component: {fileID: 548990337}
   m_Layer: 0
   m_Name: PrototypeHero_noSword_23
   m_TagString: Untagged
@@ -339,7 +338,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 548990331}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -352,19 +351,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &548990337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 548990331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a8f51b16c8c04e498d3fb4e3b1ebae2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 100
 --- !u!1 &2080621927
 GameObject:
   m_ObjectHideFlags: 0
