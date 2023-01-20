@@ -5,26 +5,23 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     // Start is called before the first frame update
-    private Rigidbody2D rb;
-    void Start()
-    {
-        rb = gameObject.GetComponent<Rigidbody2D>();
-    }
+    public CharacterController2D controller;
 
+    private float HorizontalMovement = 0f;
+
+    private bool jump = false;
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space"))
+        HorizontalMovement = Input.GetAxisRaw("Horizontal");
+        if (Input.GetButtonDown("Jump"))
         {
-            rb.velocity = new Vector2(0, 5);
+            jump = true;
         }
-        if (Input.GetKeyDown("left"))
-        {
-            rb.velocity = new Vector2(-3, 0);
-        }
-        if (Input.GetKeyDown("right"))
-        {
-            rb.velocity = new Vector2(3, 0);
-        }
+    }
+
+    void FixedUpdate()
+    {
+        controller.Move(HorizontalMovement,false,jump);
     }
 }

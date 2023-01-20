@@ -236,6 +236,7 @@ GameObject:
   - component: {fileID: 548990335}
   - component: {fileID: 548990336}
   - component: {fileID: 548990337}
+  - component: {fileID: 548990338}
   m_Layer: 0
   m_Name: PrototypeHero_noSword_23
   m_TagString: Untagged
@@ -379,6 +380,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aefe9f65322746d4abef56e4ffeeeb1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 548990338}
+--- !u!114 &548990338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548990331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c2fe22a82b4bb34495e3d6e8fbd1b6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_JumpForce: 400
+  m_CrouchSpeed: 0.36
+  m_MovementSmoothing: 0.05
+  m_AirControl: 1
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 1
+  m_GroundCheck: {fileID: 2080621929}
+  m_CeilingCheck: {fileID: 2080621929}
+  m_CrouchDisableCollider: {fileID: 0}
+  OnLandEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCrouchEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &674956246 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 8714793422255759616, guid: 25f0f428450154d3293e9d0624a898a1, type: 3}
