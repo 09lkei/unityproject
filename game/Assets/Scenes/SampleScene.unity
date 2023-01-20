@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -207,6 +208,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75d378034daef415688c14ee8bb033eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followTransform: {fileID: 548990334}
+  mapBounds: {fileID: 674956246}
 --- !u!1 &548990331
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,6 +236,7 @@ GameObject:
   - component: {fileID: 548990335}
   - component: {fileID: 548990336}
   - component: {fileID: 548990337}
+  - component: {fileID: 548990338}
   m_Layer: 0
   m_Name: PrototypeHero_noSword_23
   m_TagString: Untagged
@@ -364,6 +380,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aefe9f65322746d4abef56e4ffeeeb1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 548990338}
+--- !u!114 &548990338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548990331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c2fe22a82b4bb34495e3d6e8fbd1b6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_JumpForce: 400
+  m_CrouchSpeed: 0.36
+  m_MovementSmoothing: 0.05
+  m_AirControl: 1
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 1
+  m_GroundCheck: {fileID: 2080621929}
+  m_CeilingCheck: {fileID: 2080621929}
+  m_CrouchDisableCollider: {fileID: 0}
+  OnLandEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCrouchEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!61 &674956246 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 8714793422255759616, guid: 25f0f428450154d3293e9d0624a898a1, type: 3}
+  m_PrefabInstance: {fileID: 7085620183714721434}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2080621927
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,6 +600,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4665324736086433288, guid: 25f0f428450154d3293e9d0624a898a1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714793422255759616, guid: 25f0f428450154d3293e9d0624a898a1, type: 3}
+      propertyPath: m_Size.x
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714793422255759616, guid: 25f0f428450154d3293e9d0624a898a1, type: 3}
+      propertyPath: m_Size.y
+      value: 8.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714793422255759616, guid: 25f0f428450154d3293e9d0624a898a1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714793422255759616, guid: 25f0f428450154d3293e9d0624a898a1, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714793422255759616, guid: 25f0f428450154d3293e9d0624a898a1, type: 3}
+      propertyPath: m_UsedByComposite
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
