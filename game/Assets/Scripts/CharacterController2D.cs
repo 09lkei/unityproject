@@ -19,6 +19,7 @@ public class CharacterController2D : MonoBehaviour
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
 	private bool doublejump = true;
+	public ParticleSystem jumpEffect;
 
 	[Header("Events")]
 	[Space]
@@ -132,6 +133,7 @@ public class CharacterController2D : MonoBehaviour
 				m_Grounded = false;
 				doublejump = true;
 			} else {
+				jumpEffect.Play();
 				doublejump = false;
 			}
 			Debug.Log(doublejump);
