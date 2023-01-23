@@ -14,15 +14,16 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HorizontalMovement = Input.GetAxisRaw("Horizontal") * movementSpeed;
+        HorizontalMovement = Input.GetAxisRaw("Horizontal");
         if (Input.GetButtonDown("Jump"))
         {
+            Debug.Log(Input.GetAxisRaw("Horizontal"));
             jump = true;
         }
     }
 
     void FixedUpdate()
     {
-        controller.Move(HorizontalMovement * Time.fixedDeltaTime,false,jump);
+        controller.Move(HorizontalMovement,false,jump);
     }
 }

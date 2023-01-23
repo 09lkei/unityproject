@@ -381,6 +381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 548990338}
+  movementSpeed: 0.1
 --- !u!114 &548990338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,7 +402,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_GroundCheck: {fileID: 2080621929}
-  m_CeilingCheck: {fileID: 2080621929}
+  m_CeilingCheck: {fileID: 1493934418}
   m_CrouchDisableCollider: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
@@ -412,6 +413,11 @@ MonoBehaviour:
 --- !u!61 &674956246 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 8714793422255759616, guid: 25f0f428450154d3293e9d0624a898a1, type: 3}
+  m_PrefabInstance: {fileID: 7085620183714721434}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1493934418 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7085620185352210577, guid: 25f0f428450154d3293e9d0624a898a1, type: 3}
   m_PrefabInstance: {fileID: 7085620183714721434}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2080621927

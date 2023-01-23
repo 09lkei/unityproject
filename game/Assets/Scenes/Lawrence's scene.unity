@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followTransform: {fileID: 212035611}
-  mapBounds: {fileID: 1028066063}
+  mapBounds: {fileID: 0}
 --- !u!81 &173532516
 AudioListener:
   m_ObjectHideFlags: 0
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_JumpForce: 10
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
-  m_AirControl: 1
+  m_AirControl: 0
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 5
@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 212035605}
-  movementSpeed: 1
+  movementSpeed: 0.01
 --- !u!50 &212035607
 Rigidbody2D:
   serializedVersion: 4
@@ -404,7 +404,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212035604}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.7, y: 2.18, z: 0}
+  m_LocalPosition: {x: -5.4, y: -3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -512,7 +512,8 @@ PrefabInstance:
       propertyPath: m_UsedByComposite
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8714793422255759616, guid: 25f0f428450154d3293e9d0624a898a1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 25f0f428450154d3293e9d0624a898a1, type: 3}
 --- !u!1 &356629578
 GameObject:
@@ -625,11 +626,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1028066063 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 8714793422255759616, guid: 25f0f428450154d3293e9d0624a898a1, type: 3}
-  m_PrefabInstance: {fileID: 355691762}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1219001136
 GameObject:
   m_ObjectHideFlags: 0
