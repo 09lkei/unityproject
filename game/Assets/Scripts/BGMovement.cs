@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BGMovement : MonoBehaviour
 {
+    [SerializeField] private float parallaxEffectMultiplier;
+
     private Transform cameraTransform;
     private Vector3 lastCameraPosition;
 
@@ -18,7 +20,7 @@ public class BGMovement : MonoBehaviour
     {
         
         Vector3 deltaMovement = cameraTransform.position - lastCameraPosition;
-        float parallaxEffectMultiplier = .5f;
+        //float parallaxEffectMultiplier = .5f;
         transform.position += deltaMovement * parallaxEffectMultiplier;
         lastCameraPosition = cameraTransform.position;
     }
