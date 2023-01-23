@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+public class pauseMenu : MonoBehaviour
 {
-    [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject PauseMenu;
 
     public void Pause()
     {
-        pauseMenu.SetActive(true);
+        PauseMenu.SetActive(true);
         Time.timeScale = 0f;
     }
 
     public void Resume()
     {
-        pauseMenu.SetActive(false);
+        PauseMenu.SetActive(false);
         Time.timeScale = 1f;
     }
 
