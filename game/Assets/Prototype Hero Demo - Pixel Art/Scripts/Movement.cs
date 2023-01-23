@@ -8,12 +8,13 @@ public class Movement : MonoBehaviour
     public CharacterController2D controller;
 
     private float HorizontalMovement = 0f;
+    public float movementSpeed = 0f;
 
     private bool jump = false;
     // Update is called once per frame
     void Update()
     {
-        HorizontalMovement = Input.GetAxisRaw("Horizontal");
+        HorizontalMovement = Input.GetAxisRaw("Horizontal") * movementSpeed;
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
@@ -22,6 +23,6 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        controller.Move(HorizontalMovement,false,jump);
+        controller.Move(HorizontalMovement * Time.fixedDeltaTime,false,jump);
     }
 }
