@@ -25,5 +25,6 @@ public class Movement : MonoBehaviour
     void FixedUpdate()
     {
         controller.Move(HorizontalMovement,false,jump);
+        jump = false;
     }
 }
