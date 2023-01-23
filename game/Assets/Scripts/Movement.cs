@@ -17,7 +17,6 @@ public class Movement : MonoBehaviour
         HorizontalMovement = Input.GetAxisRaw("Horizontal");
         if (Input.GetButtonDown("Jump"))
         {
-            Debug.Log(Input.GetAxisRaw("Horizontal"));
             jump = true;
         }
     }
