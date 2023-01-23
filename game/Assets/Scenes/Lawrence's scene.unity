@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c2fe22a82b4bb34495e3d6e8fbd1b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 10
+  m_JumpForce: 400
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
   m_AirControl: 0
@@ -448,6 +448,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background
       objectReference: {fileID: 0}
+    - target: {fileID: 109332905176150732, guid: 25f0f428450154d3293e9d0624a898a1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4665324736086433288, guid: 25f0f428450154d3293e9d0624a898a1, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -491,6 +495,18 @@ PrefabInstance:
     - target: {fileID: 4665324736086433288, guid: 25f0f428450154d3293e9d0624a898a1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085620184741456204, guid: 25f0f428450154d3293e9d0624a898a1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085620185346530813, guid: 25f0f428450154d3293e9d0624a898a1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085620185352210579, guid: 25f0f428450154d3293e9d0624a898a1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8714793422255759616, guid: 25f0f428450154d3293e9d0624a898a1, type: 3}
       propertyPath: m_Size.x
