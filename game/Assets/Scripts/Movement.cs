@@ -18,7 +18,6 @@ public class Movement : MonoBehaviour
     void Update()
     {
         HorizontalMovement = Input.GetAxisRaw("Horizontal");
-        Debug.Log(HorizontalMovement);
         if (movementSpeed<1) {
             movementSpeed+=HorizontalMovement/1000;
         }
