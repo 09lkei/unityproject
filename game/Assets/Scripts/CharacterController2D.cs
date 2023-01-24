@@ -20,6 +20,7 @@ public class CharacterController2D : MonoBehaviour
 	private Vector3 m_Velocity = Vector3.zero;
 	private bool doublejump = true;
 	public ParticleSystem jumpEffect;
+	public GameObject jumpEffectObject;
 
 	[Header("Events")]
 	[Space]
@@ -132,11 +133,12 @@ public class CharacterController2D : MonoBehaviour
 			if (m_Grounded) {
 				m_Grounded = false;
 				doublejump = true;
-			} else {
+			} else
+			{
+				jumpEffectObject.transform.position = transform.position;
 				jumpEffect.Play();
 				doublejump = false;
 			}
-			Debug.Log(doublejump);
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 		}
 	}
