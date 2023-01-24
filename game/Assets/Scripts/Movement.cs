@@ -9,20 +9,22 @@ public class Movement : MonoBehaviour
     public CharacterController2D controller;
 
     private float HorizontalMovement = 0f;
-    public float movementSpeed = 0f;
+    private float currentSpeed = 0f;
     public Animator animator;
     public Rigidbody2D rb;
+	public float maxSpeed = 1;
+	public float movementSpeed = 1;
 
     private bool jump = false;
     // Update is called once per frame
     void Update()
     {
-        HorizontalMovement = Input.GetAxisRaw("Horizontal");
-        if (movementSpeed<1) {
-            movementSpeed+=HorizontalMovement/1000;
+        HorizontalMovement = Input.GetAxisRaw("Horizontal")*movementSpeed;
+        if (Math.Abs(currentSpeed)<maxSpeed) {
+            currentSpeed+=HorizontalMovement/1000;
         }
         if (movementSpeed!=0 && HorizontalMovement==0) {
-            movementSpeed=0;
+            currentSpeed=0;
         }
         animator.SetFloat("Speed",Math.Abs(HorizontalMovement));
         animator.SetFloat("Horizontal",rb.velocity.y);
@@ -34,7 +36,7 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        controller.Move(movementSpeed,false,jump);
+        controller.Move(currentSpeed,false,jump);
         jump = false;
     }
 }
