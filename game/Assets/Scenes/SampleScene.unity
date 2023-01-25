@@ -365,7 +365,7 @@ Transform:
   - {fileID: 1277117895}
   - {fileID: 414314282}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &180151388
 GameObject:
@@ -648,6 +648,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &503939829 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1374551170065963723, guid: 3f4a8b69c72a74541bb4d9f5d9b78d56, type: 3}
+  m_PrefabInstance: {fileID: 813199400}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,10 +858,9 @@ Transform:
   m_LocalPosition: {x: -3.7, y: 2.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 813199402}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &548990335
 CapsuleCollider2D:
@@ -908,9 +912,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 548990338}
-  movementSpeed: 0.1
   animator: {fileID: 548990332}
   rb: {fileID: 548990336}
+  maxSpeed: 1
+  movementSpeed: 1
 --- !u!114 &548990338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -934,6 +939,7 @@ MonoBehaviour:
   m_CeilingCheck: {fileID: 1493934418}
   m_CrouchDisableCollider: {fileID: 0}
   jumpEffect: {fileID: 813199401}
+  jumpEffectObject: {fileID: 503939829}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1099,19 +1105,19 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 548990334}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1374551170065963700, guid: 3f4a8b69c72a74541bb4d9f5d9b78d56, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1374551170065963700, guid: 3f4a8b69c72a74541bb4d9f5d9b78d56, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.01999998
+      value: -3.72
       objectReference: {fileID: 0}
     - target: {fileID: 1374551170065963700, guid: 3f4a8b69c72a74541bb4d9f5d9b78d56, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.110000014
+      value: 2.29
       objectReference: {fileID: 0}
     - target: {fileID: 1374551170065963700, guid: 3f4a8b69c72a74541bb4d9f5d9b78d56, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1228,11 +1234,6 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1374551170065963702, guid: 3f4a8b69c72a74541bb4d9f5d9b78d56, type: 3}
   m_PrefabInstance: {fileID: 813199400}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &813199402 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1374551170065963700, guid: 3f4a8b69c72a74541bb4d9f5d9b78d56, type: 3}
-  m_PrefabInstance: {fileID: 813199400}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &885121487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1329,7 +1330,7 @@ RectTransform:
   - {fileID: 1975002902}
   - {fileID: 1787045378}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1821,7 +1822,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1493934418 stripped
 Transform:
@@ -1923,7 +1924,7 @@ RectTransform:
   - {fileID: 180151393}
   - {fileID: 1780354871}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2448,7 +2449,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4665324736086433288, guid: 25f0f428450154d3293e9d0624a898a1, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4665324736086433288, guid: 25f0f428450154d3293e9d0624a898a1, type: 3}
       propertyPath: m_LocalPosition.x
