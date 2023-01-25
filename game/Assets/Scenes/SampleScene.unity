@@ -958,7 +958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9bf7dc99c9e64c1e8ae72cab43f1a6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 90
   maxHealth: 100
   healthBar: {fileID: 885121492}
 --- !u!1 &630176431
@@ -1349,8 +1349,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b395bf818658f4d2c9755caa873919eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBarImage: {fileID: 0}
-  player: {fileID: 0}
+  healthBarImage: {fileID: 1787045379}
+  player: {fileID: 548990339}
 --- !u!1 &1175899840
 GameObject:
   m_ObjectHideFlags: 0
@@ -2270,7 +2270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

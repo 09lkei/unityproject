@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float health, maxHealth;
+    public float health;
+    public float maxHealth;
     public HealthBar healthBar;
     public void TakeDamage()
     {
@@ -15,7 +16,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         // Example so we can test the Health Bar functionality
-        if (Input.GetKeyDown(KeyCode.Backspace))
+        if (Input.GetKeyDown(KeyCode.B))
         {
             TakeDamage();
         }
