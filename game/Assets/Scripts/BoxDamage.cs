@@ -6,22 +6,24 @@ public class BoxDamage : MonoBehaviour
 {
     float amount = 5f;
 
-    // Start is called before the first frame update
-    //void Start()
+    //private void OnTriggerEnter(Collider other)
     //{
-        
+    //    Debug.Log("Hello");
+    //    other.gameObject.GetComponent<Player> ().TakeDamage (amount);
+
+
     //}
 
-    //// Update is called once per frame
-    //void Update()
-    //{
-        
-    //}
-
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        other.gameObject.GetComponent<Player>().TakeDamage(amount);
+        Debug.Log("AAAAHHHH");
 
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("Hello");
+            collision.gameObject.GetComponent<Player>().TakeDamage(amount);
+        }
 
     }
+
 }
