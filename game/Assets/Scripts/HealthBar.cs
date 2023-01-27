@@ -8,10 +8,6 @@ public class HealthBar : MonoBehaviour
     public Image healthBarImage;
     public Player player;
 
-    void Start()
-    {
-        UpdateHealthBar();
-    }
 
     public void UpdateHealthBar()
     {
