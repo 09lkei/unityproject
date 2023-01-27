@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoxDamage : MonoBehaviour
+public class DmgPlayer : MonoBehaviour
 {
-    float amount = 5f;
+    float amount = 10f;
 
     void OnTriggerEnter2D(Collider2D other)
     {

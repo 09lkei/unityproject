@@ -8,6 +8,11 @@ public class Player : MonoBehaviour
     public float maxHealth;
     public HealthBar healthBar;
    
+    void Start()
+    {
+        healthBar.UpdateHealthBar();
+    }
+
     void Update()
     {
     }
