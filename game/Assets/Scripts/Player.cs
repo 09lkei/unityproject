@@ -7,18 +7,10 @@ public class Player : MonoBehaviour
     public float health;
     public float maxHealth;
     public HealthBar healthBar;
-    public void TakeDamage()
+
+    public void TakeDamage(float amount)
     {
-        // Use your own damage handling code, or this example one.
-        health -= Mathf.Min(Random.value, health / 4f);
+        health -= amount;
         healthBar.UpdateHealthBar();
-    }
-    void Update()
-    {
-        // Example so we can test the Health Bar functionality
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            TakeDamage();
-        }
     }
 }
