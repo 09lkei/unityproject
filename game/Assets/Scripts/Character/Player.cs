@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public float health;
     public float maxHealth;
     public HealthBar healthBar;
+    bool alive;
    
     void Start()
     {
@@ -15,6 +16,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+
     }
 
     public void TakeDamage(float amount)
