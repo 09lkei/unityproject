@@ -225,7 +225,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132420345}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -237,7 +237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 3.26, y: -1.94}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &208223045
@@ -945,7 +945,8 @@ GameObject:
   - component: {fileID: 411055514}
   - component: {fileID: 411055513}
   - component: {fileID: 411055512}
-  m_Layer: 6
+  - component: {fileID: 411055520}
+  m_Layer: 8
   m_Name: PrototypeHero_noSword_23 (1)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1133,13 +1134,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 411055511}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.8, y: 2.12, z: 0}
+  m_LocalPosition: {x: -7.82, y: 2.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &411055520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411055511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4376cecd227dfbb4492cc489c6c32ea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 411055515}
+  animator: {fileID: 411055517}
 --- !u!1001 &742610334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2395,6 +2410,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336537106}
   m_CullTransparentMesh: 1
+--- !u!1 &1353522135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1353522136}
+  m_Layer: 6
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1353522136
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353522135}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5, y: -0.24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1362818883}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1362818875
 GameObject:
   m_ObjectHideFlags: 0
@@ -2411,6 +2457,7 @@ GameObject:
   - component: {fileID: 1362818878}
   - component: {fileID: 1362818877}
   - component: {fileID: 1362818876}
+  - component: {fileID: 1362818884}
   m_Layer: 6
   m_Name: PrototypeHero_noSword_23
   m_TagString: Player
@@ -2602,10 +2649,29 @@ Transform:
   m_LocalPosition: {x: -3.7, y: 2.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1353522136}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1362818884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362818875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3bf3a94e33a76147a56895cbcf0bc58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1362818881}
+  attackPoint: {fileID: 1353522136}
+  attackRange: 0.75
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1362887734
 GameObject:
   m_ObjectHideFlags: 0
