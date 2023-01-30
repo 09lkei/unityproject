@@ -6,14 +6,14 @@ using System;
 public class Movement : MonoBehaviour
 {
     // Start is called before the first frame update
-    public CharacterController2D controller;
+    [SerializeField] private CharacterController2D controller;
 
     private float HorizontalMovement = 0f;
     private float currentSpeed = 0f;
-    public Animator animator;
-    public Rigidbody2D rb;
-	public float maxSpeed = 1;
-	public float movementSpeed = 1;
+    [SerializeField] private Animator animator;
+    [SerializeField] private Rigidbody2D rb;
+	[SerializeField] private float maxSpeed = 1;
+	[SerializeField] private float movementSpeed = 1;
 
     private bool jump = false;
     // Update is called once per frame
