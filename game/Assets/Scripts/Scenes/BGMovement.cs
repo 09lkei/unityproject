@@ -20,7 +20,6 @@ public class BGMovement : MonoBehaviour
     {
         
         Vector3 deltaMovement = cameraTransform.position - lastCameraPosition;
-        //float parallaxEffectMultiplier = .5f;
         transform.position += deltaMovement * parallaxEffectMultiplier;
         lastCameraPosition = cameraTransform.position;
     }
