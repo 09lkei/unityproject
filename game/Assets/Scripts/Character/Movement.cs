@@ -26,8 +26,8 @@ public class Movement : MonoBehaviour
         if (movementSpeed!=0 && HorizontalMovement==0) {
             currentSpeed=0;
         }
-        animator.SetFloat("Speed",Math.Abs(HorizontalMovement));
-        animator.SetFloat("Horizontal",rb.velocity.y);
+        animator.SetFloat("Speed",Math.Abs(currentSpeed));
+        animator.SetFloat("Vertical",rb.velocity.y);
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
