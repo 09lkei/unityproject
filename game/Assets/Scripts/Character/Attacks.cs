@@ -18,7 +18,7 @@ public class Attacks : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
+            Instantiate(ProjectilePrefab, LaunchOffset.position, new Quaternion(0,0,0,transform.localScale.x));
 
         }
     }

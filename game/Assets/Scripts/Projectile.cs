@@ -15,7 +15,7 @@ public class Projectile : MonoBehaviour
 
     private void Update()
     {
-        transform.position += -transform.right * Time.deltaTime * speed * transform.localScale.x;
+        transform.position -= -transform.right * Time.deltaTime * speed * transform.rotation.w;
     }
 
 
