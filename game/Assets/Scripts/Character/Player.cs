@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
         if (health <= 0)
         {
             alive = false;
+            Destroy(gameObject);
         }
 
         healthBar.UpdateHealthBar();
