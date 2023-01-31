@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    float damage = 10f;
+    float damage = 0f;
     public float speed = 4.5f;
 
     //void OnTriggerEnter2D(Collider2D other)
