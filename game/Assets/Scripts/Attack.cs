@@ -5,10 +5,10 @@ using UnityEngine.Events;
 
 public class Attack : MonoBehaviour
 {
-    public Animator animator;
-    public Transform attackPoint;
-    public float attackRange =2f;
-    public LayerMask enemyLayers;
+    [SerializeField] private Animator animator;
+    [SerializeField] private Transform attackPoint;
+    [SerializeField] private float attackRange =2f;
+    [SerializeField] private LayerMask enemyLayers;
     
     void Start() {
 

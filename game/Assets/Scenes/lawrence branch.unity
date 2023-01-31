@@ -942,12 +942,11 @@ GameObject:
   - component: {fileID: 411055517}
   - component: {fileID: 411055516}
   - component: {fileID: 411055515}
-  - component: {fileID: 411055514}
   - component: {fileID: 411055513}
   - component: {fileID: 411055512}
   - component: {fileID: 411055520}
   m_Layer: 8
-  m_Name: PrototypeHero_noSword_23 (1)
+  m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -985,7 +984,7 @@ MonoBehaviour:
   m_JumpForce: 300
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
-  m_AirControl: 1
+  m_AirControl: 0
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 128
@@ -1000,23 +999,6 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &411055514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411055511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aefe9f65322746d4abef56e4ffeeeb1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 411055513}
-  animator: {fileID: 411055517}
-  rb: {fileID: 411055515}
-  maxSpeed: 1
-  movementSpeed: 1
 --- !u!50 &411055515
 Rigidbody2D:
   serializedVersion: 4
@@ -1155,6 +1137,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 411055515}
   animator: {fileID: 411055517}
+  self: {fileID: 411055519}
+  controller: {fileID: 411055513}
+  player: {fileID: 1362818883}
+  maxSpeed: 0.5
+  movementSpeed: 0.5
 --- !u!1001 &742610334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2459,7 +2446,7 @@ GameObject:
   - component: {fileID: 1362818876}
   - component: {fileID: 1362818884}
   m_Layer: 6
-  m_Name: PrototypeHero_noSword_23
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

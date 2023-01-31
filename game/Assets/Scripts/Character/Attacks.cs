@@ -18,8 +18,6 @@ public class Attacks : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            transform.rotation = Quaternion.Euler(new Vector3(0, 10, 0));
-
             Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
 
         }
