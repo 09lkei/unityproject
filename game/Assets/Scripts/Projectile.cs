@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    float damage = 10f;
+    float damage = 0f;
     public float speed = 4.5f;
 
     //void OnTriggerEnter2D(Collider2D other)
@@ -27,7 +27,8 @@ public class Projectile : MonoBehaviour
         }
         if (collision.gameObject.tag == "Enemy")
         {
-            collision.gameObject.GetComponent<Player>().TakeDamage(20);
+            float dmg = collision.gameObject.armour;
+            collision.gameObject.GetComponent<Player>().TakeDamage(20/dmg);
         }
         Destroy(gameObject);
     }
