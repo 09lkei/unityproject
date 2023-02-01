@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Attributes : MonoBehaviour
 {
     public float health;
     public float maxHealth;
     public HealthBar healthBar;
     public float armour;
-    public float strength;
     bool alive;
    
     void Start()
@@ -32,4 +31,5 @@ public class Player : MonoBehaviour
 
         healthBar.UpdateHealthBar();
     }
+
 }

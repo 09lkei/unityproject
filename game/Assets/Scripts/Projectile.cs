@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    float damage = 0f;
-    public float speed = 4.5f;
+    public float speed = 10f;
+    public float damage = 10f;
 
-    //void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    other.gameObject.GetComponent<Player>().TakeDamage(amount);
-
-    //}
 
     private void Update()
     {
@@ -21,21 +16,17 @@ public class Projectile : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            collision.gameObject.GetComponent<Player>().TakeDamage(damage);
-        }
+        //if (collision.gameObject.tag == "Player")
+        //{
+        //    collision.gameObject.GetComponent<Player>().TakeDamage(damage);
+        //}
+
         if (collision.gameObject.tag == "Enemy")
         {
-            float dmg = collision.gameObject.armour;
-            collision.gameObject.GetComponent<Player>().TakeDamage(20/dmg);
+            float armour = collision.gameObject.GetComponent<Attributes>().armour;
+
+            collision.gameObject.GetComponent<Attributes>().TakeDamage(damage/armour);
         }
         Destroy(gameObject);
     }
-
-
-    //void OnTriggerStay2D(Collider2D other)
-    //{
-    //    other.gameObject.GetComponent<Player>().TakeDamage(1);
-    //}
 }
