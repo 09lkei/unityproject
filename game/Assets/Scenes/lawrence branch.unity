@@ -1142,6 +1142,38 @@ MonoBehaviour:
   player: {fileID: 1362818883}
   maxSpeed: 0.5
   movementSpeed: 0.5
+  aggroRange: 10
+--- !u!1 &472938375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 472938376}
+  m_Layer: 6
+  m_Name: Projectilepoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &472938376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472938375}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.78, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1362818883}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &742610334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2445,6 +2477,7 @@ GameObject:
   - component: {fileID: 1362818877}
   - component: {fileID: 1362818876}
   - component: {fileID: 1362818884}
+  - component: {fileID: 1362818885}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -2514,8 +2547,8 @@ MonoBehaviour:
   controller: {fileID: 1362818877}
   animator: {fileID: 1362818881}
   rb: {fileID: 1362818879}
-  maxSpeed: 1
-  movementSpeed: 1
+  maxSpeed: 5
+  movementSpeed: 5
 --- !u!50 &1362818879
 Rigidbody2D:
   serializedVersion: 4
@@ -2638,6 +2671,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1353522136}
+  - {fileID: 472938376}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2659,6 +2693,20 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &1362818885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362818875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddfbada45628045daa2777e6b959fcce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProjectilePrefab: {fileID: 6109607367309516709, guid: 5c494a025892843fe9aae3dd40fb0b44, type: 3}
+  LaunchOffset: {fileID: 472938376}
 --- !u!1 &1362887734
 GameObject:
   m_ObjectHideFlags: 0
