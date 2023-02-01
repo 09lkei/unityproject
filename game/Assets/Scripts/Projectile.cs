@@ -27,8 +27,8 @@ public class Projectile : MonoBehaviour
         }
         if (collision.gameObject.tag == "Enemy")
         {
-            float dmg = collision.gameObject.armour;
-            collision.gameObject.GetComponent<Player>().TakeDamage(20/dmg);
+            //float dmg = collision.gameObject.armour;
+            collision.gameObject.GetComponent<Player>().TakeDamage(20);
         }
         Destroy(gameObject);
     }
