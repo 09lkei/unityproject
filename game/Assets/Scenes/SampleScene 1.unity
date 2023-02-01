@@ -1691,7 +1691,7 @@ GameObject:
   - component: {fileID: 1091628597}
   - component: {fileID: 1091628598}
   - component: {fileID: 1091628599}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: PrototypeHero_noSword_23 (1)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
