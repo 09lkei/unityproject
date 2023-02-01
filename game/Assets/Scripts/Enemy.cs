@@ -23,7 +23,6 @@ public class Enemy : MonoBehaviour
     }
     void Update()
     {
-		Debug.Log(stuntime);
         if (Math.Abs(player.position.x - self.position.x) < aggroRange && stuntime == 0)
         {
             if (player.position.x > self.position.x)

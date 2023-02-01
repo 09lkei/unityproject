@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22996415}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.97, y: -0.03, z: 0}
+  m_LocalPosition: {x: 0.8, y: -0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -431,7 +431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarImage: {fileID: 1019434359}
-  player: {fileID: 1091628589}
+  player: {fileID: 1091628597}
 --- !u!114 &154125949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -911,12 +911,12 @@ GameObject:
   - component: {fileID: 548990334}
   - component: {fileID: 548990333}
   - component: {fileID: 548990332}
+  - component: {fileID: 548990341}
   - component: {fileID: 548990335}
   - component: {fileID: 548990336}
   - component: {fileID: 548990337}
   - component: {fileID: 548990338}
   - component: {fileID: 548990339}
-  - component: {fileID: 548990340}
   m_Layer: 6
   m_Name: PrototypeHero_noSword_23
   m_TagString: Player
@@ -1112,8 +1112,7 @@ MonoBehaviour:
   maxHealth: 100
   healthBar: {fileID: 885121492}
   armour: 8
-  strength: 5
---- !u!114 &548990340
+--- !u!114 &548990341
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1122,9 +1121,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 548990331}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddfbada45628045daa2777e6b959fcce, type: 3}
+  m_Script: {fileID: 11500000, guid: b3bf3a94e33a76147a56895cbcf0bc58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 548990332}
+  attackPoint: {fileID: 22996416}
+  attackRange: 1.5
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 256
   ProjectilePrefab: {fileID: 6109607367309516709, guid: 5c494a025892843fe9aae3dd40fb0b44, type: 3}
   LaunchOffset: {fileID: 22996416}
 --- !u!1 &630176431
@@ -1682,9 +1687,10 @@ GameObject:
   - component: {fileID: 1091628594}
   - component: {fileID: 1091628593}
   - component: {fileID: 1091628592}
-  - component: {fileID: 1091628591}
   - component: {fileID: 1091628590}
-  - component: {fileID: 1091628589}
+  - component: {fileID: 1091628597}
+  - component: {fileID: 1091628598}
+  - component: {fileID: 1091628599}
   m_Layer: 6
   m_Name: PrototypeHero_noSword_23 (1)
   m_TagString: Enemy
@@ -1692,23 +1698,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1091628589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1091628588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9bf7dc99c9e64c1e8ae72cab43f1a6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  maxHealth: 100
-  healthBar: {fileID: 154125948}
-  armour: 5
-  strength: 8
 --- !u!114 &1091628590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1739,23 +1728,6 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1091628591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1091628588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aefe9f65322746d4abef56e4ffeeeb1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 1091628590}
-  animator: {fileID: 1091628594}
-  rb: {fileID: 1091628592}
-  maxSpeed: 1
-  movementSpeed: 1
 --- !u!50 &1091628592
 Rigidbody2D:
   serializedVersion: 4
@@ -1787,7 +1759,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.4}
@@ -1880,6 +1852,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1091628597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091628588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9bf7dc99c9e64c1e8ae72cab43f1a6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 80
+  maxHealth: 90
+  healthBar: {fileID: 154125948}
+  armour: 2
+--- !u!114 &1091628598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091628588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4376cecd227dfbb4492cc489c6c32ea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1091628592}
+  animator: {fileID: 1091628594}
+  self: {fileID: 1091628596}
+  controller: {fileID: 1091628590}
+  player: {fileID: 548990334}
+  maxSpeed: 0.5
+  movementSpeed: 0.5
+  aggroRange: 8
+--- !u!70 &1091628599
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091628588}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.4}
+  m_Size: {x: 0.4880259, y: 1.2862936}
+  m_Direction: 0
 --- !u!1 &1175899840
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,15 +16,9 @@ public class Projectile : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        //if (collision.gameObject.tag == "Player")
-        //{
-        //    collision.gameObject.GetComponent<Player>().TakeDamage(damage);
-        //}
-
         if (collision.gameObject.tag == "Enemy")
         {
             float armour = collision.gameObject.GetComponent<Attributes>().armour;
-
             collision.gameObject.GetComponent<Attributes>().TakeDamage(damage/armour);
         }
         Destroy(gameObject);
