@@ -16,14 +16,15 @@ public class Enemy : MonoBehaviour
     private float HorizontalMovement = 0f;
     private float currentSpeed = 0f;
     private bool jump = false;
+	private int stuntime = 0;
     // Update is called once per frame
     void Start() {
         currentSpeed=movementSpeed;
     }
     void Update()
     {
-        Debug.Log(movementSpeed);
-        if (Math.Abs(player.position.x - self.position.x) < aggroRange)
+		Debug.Log(stuntime);
+        if (Math.Abs(player.position.x - self.position.x) < aggroRange && stuntime == 0)
         {
             if (player.position.x > self.position.x)
             {
@@ -41,22 +42,31 @@ public class Enemy : MonoBehaviour
 
         animator.SetFloat("Speed",Math.Abs(HorizontalMovement*currentSpeed));
         animator.SetFloat("Vertical",rb.velocity.y);
-        
     }
     void FixedUpdate()
     {
-        controller.Move(HorizontalMovement*currentSpeed,false,jump);
-        jump = false;
+		if (stuntime==0) {
+        	controller.Move(HorizontalMovement*currentSpeed,false,jump);
+        	jump = false;
+		}
     }
     public void takeDamage() {
         rb.velocity = new Vector2(self.position.x-player.position.x,3);
         animator.SetTrigger("Hurt");
-        StartCoroutine(stun());
+		if (stuntime==0) {
+			stuntime = 20;
+			StartCoroutine(stun());
+		} else {
+			stuntime = 20;
+		}
     }
     IEnumerator stun() {
-        currentSpeed = 0;
-        yield return new WaitForSeconds(3);
-        currentSpeed=movementSpeed;
+		Debug.Log("hi");
+		if (stuntime>0) {
+        	yield return new WaitForSeconds(0.1f);
+			stuntime -=1;
+			StartCoroutine(stun());
+		}
     }
     
     void OnDrawGizmosSelected() {
