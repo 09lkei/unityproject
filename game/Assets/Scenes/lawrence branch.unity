@@ -351,6 +351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4.5
+  damage: 10
 --- !u!212 &208223050
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -968,7 +969,6 @@ MonoBehaviour:
   maxHealth: 100
   healthBar: {fileID: 1643279902}
   armour: 5
-  strength: 8
 --- !u!114 &411055513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1167,7 +1167,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472938375}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.78, y: 0, z: 0}
+  m_LocalPosition: {x: 1.19, y: -0.71, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2477,7 +2477,6 @@ GameObject:
   - component: {fileID: 1362818877}
   - component: {fileID: 1362818876}
   - component: {fileID: 1362818884}
-  - component: {fileID: 1362818885}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -2501,7 +2500,6 @@ MonoBehaviour:
   maxHealth: 100
   healthBar: {fileID: 132420346}
   armour: 8
-  strength: 5
 --- !u!114 &1362818877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2693,18 +2691,6 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &1362818885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1362818875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddfbada45628045daa2777e6b959fcce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   ProjectilePrefab: {fileID: 6109607367309516709, guid: 5c494a025892843fe9aae3dd40fb0b44, type: 3}
   LaunchOffset: {fileID: 472938376}
 --- !u!1 &1362887734
