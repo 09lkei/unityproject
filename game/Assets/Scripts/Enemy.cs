@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float maxSpeed = 0.5f;
 	[SerializeField] private float movementSpeed = 0.5f;
     [SerializeField] private float aggroRange = 1f;
+	[SerializeField] private float minRange = 0.1f;
     private float HorizontalMovement = 0f;
     private float currentSpeed = 0f;
     private bool jump = false;
@@ -23,7 +24,7 @@ public class Enemy : MonoBehaviour
     }
     void Update()
     {
-        if (Math.Abs(player.position.x - self.position.x) < aggroRange && stuntime == 0)
+        if (Math.Abs(player.position.x - self.position.x) < aggroRange && Math.Abs(player.position.x - self.position.x) > minRange && stuntime == 0)
         {
             if (player.position.x > self.position.x)
             {
@@ -70,5 +71,6 @@ public class Enemy : MonoBehaviour
     
     void OnDrawGizmosSelected() {
         Gizmos.DrawWireSphere(transform.position, aggroRange);
+		Gizmos.DrawWireSphere(transform.position, minRange);
     }
 }
