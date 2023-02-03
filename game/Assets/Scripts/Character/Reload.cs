@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class Reload : MonoBehaviour
 {
-    public Image InnerImage;
-    public Attack playerAttack;
+    public Image InnerImage; //inner image of health bar
+    public Attack playerAttack; //script that contains how long the delay is
+
+
     float AttackDelay;
     float DelayCurrent;
     float startTime;
@@ -20,7 +22,7 @@ public class Reload : MonoBehaviour
     {
         if (playerAttack.canShoot == false)
         {
-            DelayCurrent = Time.time - startTime;
+            DelayCurrent = Time.time - startTime; //sets DelayCurrent as how long it has been since starttime has been called
             InnerImage.fillAmount = Mathf.Clamp(DelayCurrent / AttackDelay, 0, 1f);
         }
     }
