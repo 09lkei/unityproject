@@ -7,28 +7,34 @@ public class Reload : MonoBehaviour
 {
     public Image InnerImage;
     public Attack player;
-    float AttackDelay = 0;
-    float DelayCurrent = 0;
+    float AttackDelay;
+    float DelayCurrent;
+    float startTime;
     
 
     void Start()
     {
-        float AttackDelay = player.returnAttackDelay();
-        float DelayCurrent = AttackDelay;
-        UpdateReload();
+        AttackDelay = player.returnAttackDelay();
+        DelayCurrent = 0;
     }
 
     void Update()
     {
-
     }
+
 
     public void UpdateReload()
     {
-        InnerImage.fillAmount = Mathf.Clamp(DelayCurrent / AttackDelay, 0, 1f);
+        startTime = Time.time;
+        Debug.Log("HI");
+        while (player.canShoot == false)
+        {
+            
+            DelayCurrent = DelayCurrent + (startTime - Time.time);
+            InnerImage.fillAmount = Mathf.Clamp(DelayCurrent / AttackDelay, 0, 1f);
+        }
+        
     }
-
-
 
 
 }

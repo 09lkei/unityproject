@@ -12,12 +12,13 @@ public class Attack : MonoBehaviour
 
     public Projectile ProjectilePrefab;
     public Transform LaunchOffset;
-    public float AttackDelay;
-    public float ShootDelay;
+    public float AttackDelay = 0.5f;
+    public float ShootDelay = 2f;
     public Attributes player;
+    public Reload player1;
     
     private float Damage = 0;
-    private bool canShoot = true;
+    public bool canShoot = true;
 
     void Start() {
         float Damage = player.returnStrength();
@@ -44,7 +45,10 @@ public class Attack : MonoBehaviour
 
     public IEnumerator delay(float delayTime)
     {
+        Debug.Log("HELLO");
         canShoot = false;
+        player1.UpdateReload();
+        
         yield return new WaitForSeconds(delayTime);
         canShoot = true;
     }

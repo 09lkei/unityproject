@@ -7,6 +7,6 @@ public class Cardscript : MonoBehaviour
 	[SerializeField] private Attack player;
 	public void punch()
 	{
-		player.attack();
+		//player.attack();
 	}
 }
