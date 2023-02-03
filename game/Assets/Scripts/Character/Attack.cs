@@ -12,6 +12,11 @@ public class Attack : MonoBehaviour
 
     public Projectile ProjectilePrefab;
     public Transform LaunchOffset;
+    public float AttackDelay;
+    public float ShootDelay;
+    public Attributes player;
+    float Damage = player.returnStrength();
+
     private bool canShoot = true;
 
     void Start() {
@@ -22,14 +27,14 @@ public class Attack : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire2") && canShoot){
             attack();
-            StartCoroutine(delay(5));
+            StartCoroutine(delay(AttackDelay));
 		}
 
 
         if (Input.GetButtonDown("Fire1") && canShoot)
         {
             Instantiate(ProjectilePrefab, LaunchOffset.position, new Quaternion(0, 0, 0, transform.localScale.x));
-            StartCoroutine(delay(10));
+            StartCoroutine(delay(ShootDelay));
     
         }
 
@@ -50,7 +55,7 @@ public class Attack : MonoBehaviour
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies) {
             enemy.GetComponent<Enemy>().takeDamage();
-            enemy.GetComponent<Attributes>().TakeDamage(5f);
+            enemy.GetComponent<Attributes>().TakeDamage(Damage);
         }
         
     }

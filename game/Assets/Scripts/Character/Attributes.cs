@@ -8,8 +8,15 @@ public class Attributes : MonoBehaviour
     public float maxHealth;
     public HealthBar healthBar;
     public float armour;
+    [SerializeField] public float strength;
     bool alive;
-   
+
+
+    public float returnStrength()
+    {
+        return strength;
+    }
+
     void Start()
     {
         healthBar.UpdateHealthBar();
