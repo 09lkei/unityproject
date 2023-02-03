@@ -12,6 +12,7 @@ public class Attack : MonoBehaviour
 
     public Projectile ProjectilePrefab;
     public Transform LaunchOffset;
+    private bool canShoot = true;
 
     void Start() {
 
@@ -19,19 +20,29 @@ public class Attack : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire2")){
+        if (Input.GetButtonDown("Fire2") && canShoot){
             attack();
+            StartCoroutine(delay(5));
 		}
 
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && canShoot)
         {
             Instantiate(ProjectilePrefab, LaunchOffset.position, new Quaternion(0, 0, 0, transform.localScale.x));
-
+            StartCoroutine(delay(10));
+    
         }
+
     }
 
 
+
+    public IEnumerator delay(float delayTime)
+    {
+        canShoot = false;
+        yield return new WaitForSeconds(delayTime);
+        canShoot = true;
+    }
 
 
     void attack() {

@@ -20,6 +20,7 @@ public class Projectile : MonoBehaviour
         {
             float armour = collision.gameObject.GetComponent<Attributes>().armour;
             collision.gameObject.GetComponent<Attributes>().TakeDamage(damage);
+            collision.gameObject.GetComponent<Enemy>().takeDamage();
         }
         Destroy(gameObject);
     }
