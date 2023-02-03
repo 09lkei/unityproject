@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Reload : MonoBehaviour
 {
     public Image InnerImage;
-    public Attack player;
+    public Attack playerAttack;
     float AttackDelay;
     float DelayCurrent;
     float startTime;
@@ -14,41 +14,26 @@ public class Reload : MonoBehaviour
 
     void Start()
     {
-        AttackDelay = player.returnAttackDelay();
-        DelayCurrent = 0;
     }
 
     void Update()
     {
+        if (playerAttack.canShoot == false)
+        {
+            DelayCurrent = Time.time - startTime;
+            InnerImage.fillAmount = Mathf.Clamp(DelayCurrent / AttackDelay, 0, 1f);
+        }
     }
 
 
-    public void UpdateReload()
+    public void UpdateReload(float delayTime)
     {
         startTime = Time.time;
-        Debug.Log("HI");
-        while (player.canShoot == false)
-        {
-            
-            DelayCurrent = DelayCurrent + (startTime - Time.time);
-            InnerImage.fillAmount = Mathf.Clamp(DelayCurrent / AttackDelay, 0, 1f);
-        }
-        
+        AttackDelay = delayTime;
+        DelayCurrent = 0;
     }
 
 
 }
-
-
-
-    //void Update()
-    //{
-    //    if (player.canShoot == false)
-    //    {
-    //        DelayCurrent = DelayCurrent - 0.04f;
-    //        UpdateReload(DelayCurrent);
-    //    }
-    //}
-
 
 

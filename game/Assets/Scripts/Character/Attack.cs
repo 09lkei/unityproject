@@ -15,7 +15,7 @@ public class Attack : MonoBehaviour
     public float AttackDelay = 0.5f;
     public float ShootDelay = 2f;
     public Attributes player;
-    public Reload player1;
+    public Reload playerReloadScript;
     
     private float Damage = 0;
     public bool canShoot = true;
@@ -45,10 +45,8 @@ public class Attack : MonoBehaviour
 
     public IEnumerator delay(float delayTime)
     {
-        Debug.Log("HELLO");
         canShoot = false;
-        player1.UpdateReload();
-        
+        playerReloadScript.UpdateReload(delayTime);
         yield return new WaitForSeconds(delayTime);
         canShoot = true;
     }
@@ -69,9 +67,5 @@ public class Attack : MonoBehaviour
             return;
         }
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-    }
-    public float returnAttackDelay()
-    {
-        return AttackDelay;
     }
 }

@@ -1306,9 +1306,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   maxHealth: 100
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 88705484}
   armour: 8
-  strength: 0
+  strength: 5
 --- !u!114 &548990341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1329,9 +1329,10 @@ MonoBehaviour:
     m_Bits: 256
   ProjectilePrefab: {fileID: 6109607367309516709, guid: 5c494a025892843fe9aae3dd40fb0b44, type: 3}
   LaunchOffset: {fileID: 22996416}
-  AttackDelay: 3
+  AttackDelay: 5
   ShootDelay: 3
   player: {fileID: 548990339}
+  playerReloadScript: {fileID: 1036663625}
   canShoot: 1
 --- !u!1 &630176431
 GameObject:
@@ -1889,7 +1890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InnerImage: {fileID: 772779207}
-  player: {fileID: 548990341}
+  playerAttack: {fileID: 548990341}
 --- !u!114 &1036663627
 MonoBehaviour:
   m_ObjectHideFlags: 0
