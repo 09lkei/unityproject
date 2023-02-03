@@ -4,30 +4,30 @@ using UnityEngine;
 
 public class Reload : MonoBehaviour
 {
-    public image InnerImage;
+    //public Image InnerImage;
     public Attack player;
     private float DelayCurrent = player.AttackDelay;
 
 
     public void UpdateReload()
     {
-        InnerImage.fillAmount = Mathf.Clamp(player.DelayCurrent / player.AttackDelay, 0, 1f);
+        //InnerImage.fillAmount = Mathf.Clamp(player.DelayCurrent / player.AttackDelay, 0, 1f);
     }
 
 
 
     void Start()
     {
-        UpdateReload();
+        //UpdateReload();
     }
 
 
     void Update()
     {
-        if (player.canShoot == false)
+        //if (player.canShoot == false)
         {
-            DelayCurrent = DelayCurrent - 0.04f;
-            UpdateReload(DelayCurrent);
+            //DelayCurrent = DelayCurrent - 0.04f;
+            //UpdateReload(DelayCurrent);
         }
     }
 }
