@@ -7,7 +7,7 @@ public class Attack : MonoBehaviour
 {
     [SerializeField] private Animator animator;
     [SerializeField] private Transform attackPoint;
-    [SerializeField] private float attackRange =2f;
+    [SerializeField] private float attackRange = 2f;
     [SerializeField] private LayerMask enemyLayers;
 
     public Projectile ProjectilePrefab;
@@ -15,12 +15,12 @@ public class Attack : MonoBehaviour
     public float AttackDelay;
     public float ShootDelay;
     public Attributes player;
-    float Damage = player.returnStrength();
-
+    
+    private float Damage = 0;
     private bool canShoot = true;
 
     void Start() {
-
+        float Damage = player.returnStrength();
     }
 
     void Update()
@@ -65,5 +65,9 @@ public class Attack : MonoBehaviour
             return;
         }
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+    public float returnAttackDelay()
+    {
+        return AttackDelay;
     }
 }
