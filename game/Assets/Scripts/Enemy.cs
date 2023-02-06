@@ -54,14 +54,13 @@ public class Enemy : MonoBehaviour
         rb.velocity = new Vector2(self.position.x-player.position.x,3);
         animator.SetTrigger("Hurt");
 		if (stuntime==0) {
-			stuntime = 20;
+			stuntime = 15;
 			StartCoroutine(stun());
 		} else {
-			stuntime = 20;
+			stuntime = 15;
 		}
     }
     IEnumerator stun() {
-		Debug.Log("hi");
 		if (stuntime>0) {
         	yield return new WaitForSeconds(0.1f);
 			stuntime -=1;
