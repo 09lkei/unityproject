@@ -17,11 +17,11 @@ public class Attack : MonoBehaviour
     public Attributes player;
     public Reload playerReloadScript;
     
-    private float Damage = 0;
+    private float Damage;
     public bool canShoot = true;
 
     void Start() {
-        float Damage = player.returnStrength();
+        Damage = player.returnStrength();
     }
 
     void Update()
