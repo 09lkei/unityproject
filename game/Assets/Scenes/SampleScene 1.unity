@@ -1308,7 +1308,7 @@ MonoBehaviour:
   maxHealth: 100
   healthBar: {fileID: 88705484}
   armour: 8
-  strength: 5
+  strength: 10
 --- !u!114 &548990341
 MonoBehaviour:
   m_ObjectHideFlags: 0
