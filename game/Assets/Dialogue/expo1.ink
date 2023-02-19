@@ -1,14 +1,3 @@
--> main
-
-=== main === 
-Make haste! Head to the morphing device and make your way to Italy 1943! We don't have much time left!
-    * What?
-        No time to explain!
-        -> musso
-    * Alright!
-        Let's go!
-        -> musso
-
 === musso ===
 Well done defeating Mussolini. 
     * So are you going to tell me what is going on now, weird disembodied voice?
@@ -53,8 +42,4 @@ Well done defeating Mussolini.
     It was, but with your help, we might just be able to defeat "him" and reverse the injuries done to the timeline. 
         * * So how do we exactly do that? It sounds easier said that done.
             - Defeating him will be extremely perilous. To win, we must defeat "him" in his own turf of the Advanced Timeline, now known as the Timeline Over Heaven. With the power granted by the unique cards and my innate power, you might just be able to see your wife once more.
-
-
-    
 -> END
-    
