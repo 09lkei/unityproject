@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float aggroRange = 1f;
 	[SerializeField] private float minRange = 0.1f;
     [SerializeField] private Attributes selfAttributes;
+    private bool canShoot;
     private float HorizontalMovement = 0f;
     private float currentSpeed = 0f;
     private bool jump = false;
