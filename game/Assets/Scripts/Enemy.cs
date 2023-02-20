@@ -14,16 +14,23 @@ public class Enemy : MonoBehaviour
 	[SerializeField] private float movementSpeed = 0.5f;
     [SerializeField] private float aggroRange = 1f;
 	[SerializeField] private float minRange = 0.1f;
+    [SerializeField] private Attributes selfAttributes;
     private float HorizontalMovement = 0f;
     private float currentSpeed = 0f;
     private bool jump = false;
 	private int stuntime = 0;
+    private float hitRange = 1f;
     // Update is called once per frame
     void Start() {
         currentSpeed=movementSpeed;
     }
     void Update()
     {
+        if (Math.Abs(player.position.x - self.position.x) < hitRange && canShoot)
+        {
+
+        }
+
         if (Math.Abs(player.position.x - self.position.x) < aggroRange && Math.Abs(player.position.x - self.position.x) > minRange && stuntime == 0)
         {
             if (player.position.x > self.position.x)
