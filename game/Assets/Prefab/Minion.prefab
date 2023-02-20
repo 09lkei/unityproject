@@ -485,7 +485,7 @@ MonoBehaviour:
   maxSpeed: 0.5
   movementSpeed: 0.5
   aggroRange: 8
-  minRange: 0.1
+  minRange: 0.2
 --- !u!70 &6785941881198332384
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

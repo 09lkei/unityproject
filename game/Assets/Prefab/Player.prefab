@@ -760,8 +760,8 @@ MonoBehaviour:
   controller: {fileID: 1621080556390359010}
   animator: {fileID: 1621080556390359023}
   rb: {fileID: 1621080556390359008}
-  maxSpeed: 4
-  movementSpeed: 1
+  maxSpeed: 2
+  movementSpeed: 0.5
 --- !u!114 &1621080556390359010
 MonoBehaviour:
   m_ObjectHideFlags: 0
