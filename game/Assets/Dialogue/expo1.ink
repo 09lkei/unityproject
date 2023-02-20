@@ -1,6 +1,8 @@
+-> musso
+
 === musso ===
 Well done defeating Mussolini. 
-    * So are you going to tell me what is going on now, weird disembodied voice?
+    * So are you going to tell me what is going on now, weird Einstein looking guy?
             Well, well, calm down youngster. I am the entity you people would call "Albert Einstein". I come from another timeline, one that is very different from yours. That timeline was called "the Advanced Timeline"
             -> advanced 
 
