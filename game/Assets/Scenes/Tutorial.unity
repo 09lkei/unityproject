@@ -435,6 +435,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 4289208398586667548, guid: 44c715f2753ec3f45a37b7a6b3d3a2be, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 35d8de34d45db9b4397b2d7ba5f67844, type: 2}
     - target: {fileID: 4289208398620506840, guid: 44c715f2753ec3f45a37b7a6b3d3a2be, type: 3}
       propertyPath: m_fontSize
       value: 16
