@@ -21,7 +21,7 @@ public class Attributes : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        amount = amount / armour
+        amount = amount / armour;
         health -= amount;
 
         if (health <= 0)
