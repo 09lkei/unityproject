@@ -247,6 +247,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3069250401673020369, guid: 43832509459738545b3017ce19ab2ac6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069250401673020369, guid: 43832509459738545b3017ce19ab2ac6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1362818876}
+    - target: {fileID: 3069250401673020369, guid: 43832509459738545b3017ce19ab2ac6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TakeDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069250401673020369, guid: 43832509459738545b3017ce19ab2ac6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Attributes, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069250401673020369, guid: 43832509459738545b3017ce19ab2ac6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3069250402135483054, guid: 43832509459738545b3017ce19ab2ac6, type: 3}
       propertyPath: m_Name
       value: Hand
@@ -1066,6 +1086,7 @@ MonoBehaviour:
   maxHealth: 100
   healthBar: {fileID: 1643279902}
   armour: 5
+  strength: 0
 --- !u!114 &411055513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2526,6 +2547,7 @@ MonoBehaviour:
   maxHealth: 100
   healthBar: {fileID: 132420346}
   armour: 8
+  strength: 0
 --- !u!114 &1362818877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2719,6 +2741,11 @@ MonoBehaviour:
     m_Bits: 256
   ProjectilePrefab: {fileID: 6109607367309516709, guid: 5c494a025892843fe9aae3dd40fb0b44, type: 3}
   LaunchOffset: {fileID: 472938376}
+  AttackDelay: 0.5
+  ShootDelay: 2
+  player: {fileID: 0}
+  playerReloadScript: {fileID: 0}
+  canShoot: 1
 --- !u!1 &1362887734
 GameObject:
   m_ObjectHideFlags: 0
