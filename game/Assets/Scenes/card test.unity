@@ -2031,6 +2031,17 @@ MonoBehaviour:
   visualCue: {fileID: 1752189480}
   inkJSON: {fileID: 4900000, guid: 839f352b5d8362a4ab38f181d7364355, type: 3}
   nextSceneIndex: 3
+--- !u!114 &1133901490 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3069250403108503036, guid: 43832509459738545b3017ce19ab2ac6, type: 3}
+  m_PrefabInstance: {fileID: 3069250403400097472}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111a225a97894c84eb1b7a21834bb322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1297559930 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4289208398401889745, guid: 44c715f2753ec3f45a37b7a6b3d3a2be, type: 3}
@@ -2715,6 +2726,7 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 256
+  attribute: {fileID: 2038090464}
   ProjectilePrefab: {fileID: 6109607367309516709, guid: 5c494a025892843fe9aae3dd40fb0b44, type: 3}
   LaunchOffset: {fileID: 1318158853}
   AttackDelay: 1
@@ -2919,8 +2931,56 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3069250401597090311, guid: 43832509459738545b3017ce19ab2ac6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069250401597090311, guid: 43832509459738545b3017ce19ab2ac6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: punch
+      value: interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069250401597090311, guid: 43832509459738545b3017ce19ab2ac6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069250401673020369, guid: 43832509459738545b3017ce19ab2ac6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069250401673020369, guid: 43832509459738545b3017ce19ab2ac6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069250401673020369, guid: 43832509459738545b3017ce19ab2ac6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1133901490}
+    - target: {fileID: 3069250401673020369, guid: 43832509459738545b3017ce19ab2ac6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069250401673020369, guid: 43832509459738545b3017ce19ab2ac6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Cardscript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069250401673020369, guid: 43832509459738545b3017ce19ab2ac6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069250401673020369, guid: 43832509459738545b3017ce19ab2ac6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069250402033453895, guid: 43832509459738545b3017ce19ab2ac6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069250402033453895, guid: 43832509459738545b3017ce19ab2ac6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1133901490}
+    - target: {fileID: 3069250402033453895, guid: 43832509459738545b3017ce19ab2ac6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: interact
       objectReference: {fileID: 0}
     - target: {fileID: 3069250402135483054, guid: 43832509459738545b3017ce19ab2ac6, type: 3}
       propertyPath: m_Name

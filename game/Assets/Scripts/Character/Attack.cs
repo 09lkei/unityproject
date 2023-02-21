@@ -9,6 +9,7 @@ public class Attack : MonoBehaviour
     [SerializeField] private Transform attackPoint;
     [SerializeField] private float attackRange = 2f;
     [SerializeField] private LayerMask enemyLayers;
+    [SerializeField] private Attributes attribute;
 
     public Projectile ProjectilePrefab;
     public Transform LaunchOffset;
@@ -26,21 +27,24 @@ public class Attack : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire2") && canShoot){
-            attack();
-            StartCoroutine(delay(AttackDelay));
-		}
+        //if (Input.GetButtonDown("Fire2") && canShoot){
+        //    punch();
+        //    StartCoroutine(delay(AttackDelay));
+		//}
 
 
-        if (Input.GetButtonDown("Fire1") && canShoot)
-        {
-            Instantiate(ProjectilePrefab, LaunchOffset.position, new Quaternion(0, 0, 0, transform.localScale.x));
-            StartCoroutine(delay(ShootDelay));
+        //if (Input.GetButtonDown("Fire1") && canShoot)
+        //{
+        //    Instantiate(ProjectilePrefab, LaunchOffset.position, new Quaternion(0, 0, 0, transform.localScale.x));
+        //    StartCoroutine(delay(ShootDelay));
     
-        }
+        //}
 
     }
-
+	public void shoot() {
+		Instantiate(ProjectilePrefab, LaunchOffset.position, new Quaternion(0, 0, 0, transform.localScale.x));
+		StartCoroutine(delay(ShootDelay));
+	}
 
 
     public IEnumerator delay(float delayTime)
@@ -52,7 +56,7 @@ public class Attack : MonoBehaviour
     }
 
 
-    void attack() {
+    public void punch() {
         animator.SetTrigger("Attack1");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies) {
@@ -60,6 +64,10 @@ public class Attack : MonoBehaviour
             enemy.GetComponent<Attributes>().TakeDamage(Damage);
         }
         
+    }
+	public void heal()
+    {
+        attribute.changeHealth(-10,0.5f);
     }
 
     void OnDrawGizmosSelected() {
