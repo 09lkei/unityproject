@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float aggroRange = 1f;
 	[SerializeField] private float minRange = 0.5f;
     [SerializeField] private Attributes selfAttributes;
+	[SerializeField] private Attack attack;
     private bool canShoot;
     private float HorizontalMovement = 0f;
     private float currentSpeed = 0f;
@@ -46,6 +47,10 @@ public class Enemy : MonoBehaviour
         else
         {
             HorizontalMovement = 0;
+			if (Math.Abs(player.position.x - self.position.x) < minRange && stuntime == 0)
+			{
+			attack.punch();
+			}
         }
 
         animator.SetFloat("Speed",Math.Abs(HorizontalMovement*currentSpeed));

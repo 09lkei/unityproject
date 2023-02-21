@@ -16,7 +16,7 @@ public class Attack : MonoBehaviour
     public float AttackDelay = 0.5f;
     public float ShootDelay = 2f;
     public Attributes player;
-    public Reload playerReloadScript;
+   // public Reload playerReloadScript;
     
     private float Damage;
     public bool canShoot = true;
@@ -43,14 +43,14 @@ public class Attack : MonoBehaviour
     }
 	public void shoot() {
 		Instantiate(ProjectilePrefab, LaunchOffset.position, new Quaternion(0, 0, 0, transform.localScale.x));
-		StartCoroutine(delay(ShootDelay));
+		//StartCoroutine(delay(ShootDelay));
 	}
 
 
     public IEnumerator delay(float delayTime)
     {
         canShoot = false;
-        playerReloadScript.UpdateReload(delayTime);
+        //playerReloadScript.UpdateReload(delayTime);
         yield return new WaitForSeconds(delayTime);
         canShoot = true;
     }
@@ -67,7 +67,7 @@ public class Attack : MonoBehaviour
     }
 	public void heal()
     {
-        attribute.changeHealth(-10,0.5f);
+        attribute.changeHealth(10,0.5f);
     }
 
     void OnDrawGizmosSelected() {
