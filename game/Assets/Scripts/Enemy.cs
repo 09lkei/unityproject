@@ -28,10 +28,6 @@ public class Enemy : MonoBehaviour
     }
     void Update()
     {
-        if (Math.Abs(player.position.x - self.position.x) < hitRange && canShoot)
-        {
-
-        }
 
         if (Math.Abs(player.position.x - self.position.x) < aggroRange && Math.Abs(player.position.x - self.position.x) > minRange && stuntime == 0)
         {
