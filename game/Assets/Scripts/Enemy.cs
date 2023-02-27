@@ -78,7 +78,7 @@ public class Enemy : MonoBehaviour
         	yield return new WaitForSeconds(0.1f);
 			stuntime -=1;
 			StartCoroutine(stun());
-		}
+		}	
     }
     
     void OnDrawGizmosSelected() {

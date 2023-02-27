@@ -10,6 +10,7 @@ public class Attributes : MonoBehaviour
     public float armour;
     [SerializeField] public float strength;
     bool alive;
+	public bool isEnemy;
 
 
     public float returnStrength()
@@ -45,7 +46,6 @@ public class Attributes : MonoBehaviour
     public void TakeDamage(float amount)
     {
         amount = amount / armour;
-        Debug.Log(amount);
         health -= amount;
 
         if (health <= 0)

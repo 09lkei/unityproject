@@ -39,4 +39,8 @@ public class Movement : MonoBehaviour
         controller.Move(currentSpeed,false,jump);
         jump = false;
     }
+	public void takeDamage() {
+        rb.velocity = new Vector2(0,3);
+        animator.SetTrigger("Hurt");
+	}
 }

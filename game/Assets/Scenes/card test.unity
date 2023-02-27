@@ -1439,7 +1439,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4784057719319751623, guid: 12fbc8de767aae948aa50f6548b48172, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 12fbc8de767aae948aa50f6548b48172, type: 3}
 --- !u!1 &665814677
 GameObject:
@@ -2194,6 +2195,10 @@ PrefabInstance:
       propertyPath: movementSpeed
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 6785941881198332386, guid: 12fbc8de767aae948aa50f6548b48172, type: 3}
+      propertyPath: strength
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6785941881198332387, guid: 12fbc8de767aae948aa50f6548b48172, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2284,18 +2289,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1548395875}
-  attackPoint: {fileID: 0}
-  attackRange: 2
+  attackPoint: {fileID: 1927902816}
+  attackRange: 0.6
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 0
-  attribute: {fileID: 0}
+    m_Bits: 64
+  attribute: {fileID: 1548395882}
   ProjectilePrefab: {fileID: 0}
-  LaunchOffset: {fileID: 0}
+  LaunchOffset: {fileID: 1927902816}
   AttackDelay: 0.5
   ShootDelay: 2
-  player: {fileID: 0}
+  player: {fileID: 1548395882}
   canShoot: 1
+--- !u!114 &1548395882 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6785941881198332386, guid: 12fbc8de767aae948aa50f6548b48172, type: 3}
+  m_PrefabInstance: {fileID: 661711493}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548395868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9bf7dc99c9e64c1e8ae72cab43f1a6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1617753803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2542,6 +2558,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7028366259037459790, guid: f8802c02bb947044fbc685b925ec8865, type: 3}
   m_PrefabInstance: {fileID: 1400408228}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1927902816 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2898333522762517006, guid: 12fbc8de767aae948aa50f6548b48172, type: 3}
+  m_PrefabInstance: {fileID: 661711493}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1956716166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2686,6 +2707,7 @@ MonoBehaviour:
   healthBar: {fileID: 307521971}
   armour: 8
   strength: 10
+  isEnemy: 0
 --- !u!114 &2038090465
 MonoBehaviour:
   m_ObjectHideFlags: 0
