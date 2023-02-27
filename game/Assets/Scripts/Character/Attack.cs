@@ -61,7 +61,7 @@ public class Attack : MonoBehaviour
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies) {
             enemy.GetComponent<Attributes>().TakeDamage(Damage);
-            if (enemy.GetComponent<Attributes>().isEnemy)
+            if (enemy.GetComponent<Attributes>().isEnemy && canShoot == true)
             {
                 enemy.GetComponent<Enemy>().takeDamage();
             }
@@ -70,7 +70,9 @@ public class Attack : MonoBehaviour
                 enemy.GetComponent<Movement>().takeDamage();
             }
         }
-        
+        StartCoroutine(delay(AttackDelay));
+        Debug.Log(AttackDelay);
+
     }
 	public void heal()
     {
