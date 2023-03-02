@@ -1363,6 +1363,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2145937916}
     - target: {fileID: 6785941881198332385, guid: 12fbc8de767aae948aa50f6548b48172, type: 3}
+      propertyPath: attack
+      value: 
+      objectReference: {fileID: 1548395878}
+    - target: {fileID: 6785941881198332385, guid: 12fbc8de767aae948aa50f6548b48172, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 2038090472}
@@ -2200,11 +2204,19 @@ PrefabInstance:
       objectReference: {fileID: 605986021}
     - target: {fileID: 4784057719319751623, guid: 12fbc8de767aae948aa50f6548b48172, type: 3}
       propertyPath: ShootDelay
-      value: 100
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784057719319751623, guid: 12fbc8de767aae948aa50f6548b48172, type: 3}
+      propertyPath: punchDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784057719319751623, guid: 12fbc8de767aae948aa50f6548b48172, type: 3}
+      propertyPath: shootDelay
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4784057719319751623, guid: 12fbc8de767aae948aa50f6548b48172, type: 3}
       propertyPath: AttackDelay
-      value: 100
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6785941881198332385, guid: 12fbc8de767aae948aa50f6548b48172, type: 3}
       propertyPath: player
@@ -2220,7 +2232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6785941881198332386, guid: 12fbc8de767aae948aa50f6548b48172, type: 3}
       propertyPath: strength
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6785941881198332387, guid: 12fbc8de767aae948aa50f6548b48172, type: 3}
       propertyPath: m_RootOrder
@@ -2320,10 +2332,11 @@ MonoBehaviour:
   attribute: {fileID: 1548395882}
   ProjectilePrefab: {fileID: 0}
   LaunchOffset: {fileID: 1927902816}
-  AttackDelay: 0.5
-  ShootDelay: 2
+  punchDelay: 1
+  shootDelay: 2
   player: {fileID: 1548395882}
   canShoot: 1
+  canPunch: 1
 --- !u!114 &1548395882 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6785941881198332386, guid: 12fbc8de767aae948aa50f6548b48172, type: 3}
@@ -2728,7 +2741,7 @@ MonoBehaviour:
   health: 100
   maxHealth: 100
   healthBar: {fileID: 307521971}
-  armour: 8
+  armour: 2
   strength: 10
   isEnemy: 0
 --- !u!114 &2038090465
@@ -2836,10 +2849,11 @@ MonoBehaviour:
   attribute: {fileID: 2038090464}
   ProjectilePrefab: {fileID: 6109607367309516709, guid: 5c494a025892843fe9aae3dd40fb0b44, type: 3}
   LaunchOffset: {fileID: 1318158853}
-  AttackDelay: 1
-  ShootDelay: 1
+  punchDelay: 1
+  shootDelay: 2
   player: {fileID: 2038090464}
   canShoot: 1
+  canPunch: 1
 --- !u!95 &2038090470
 Animator:
   serializedVersion: 5
@@ -3194,6 +3208,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3069250403108503036, guid: 43832509459738545b3017ce19ab2ac6, type: 3}
       propertyPath: player
+      value: 
+      objectReference: {fileID: 2038090469}
+    - target: {fileID: 3069250403108503036, guid: 43832509459738545b3017ce19ab2ac6, type: 3}
+      propertyPath: attackScript
       value: 
       objectReference: {fileID: 2038090469}
     m_RemovedComponents: []

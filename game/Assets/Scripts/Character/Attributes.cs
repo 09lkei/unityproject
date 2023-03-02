@@ -13,10 +13,6 @@ public class Attributes : MonoBehaviour
 	public bool isEnemy;
 
 
-    public float returnStrength()
-    {
-        return strength;
-    }
 
     void Start()
     {
